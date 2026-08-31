@@ -3,7 +3,7 @@ export const profile = {
   role: 'Software Developer',
   github: 'https://github.com/unlimitedabe',
   linkedin: 'https://www.linkedin.com/in/rafael-de-matos-abe-4802392b4',
-  email: 'seu-email@exemplo.com',
+  email: 'rafaelabe0@exemplo.com',
 } as const
 
 export const featuredTechnologies = [

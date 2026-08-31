@@ -10,8 +10,8 @@ export type Experience = {
 export const experiences: readonly Experience[] = [
   {
     company: 'Arkea Soluções Inteligentes',
-    role: 'Software Developer / Liderança de desenvolvimento',
-    period: '2026 — Atual',
+    role: 'Desenvolvedor de Software Jr.',
+    period: 'Jan 2026 — Atual',
     current: true,
     description: [
       'Desenvolvimento de aplicações, automações e integrações utilizando TypeScript, React, Node.js, SQL e Docker.',
@@ -30,7 +30,7 @@ export const experiences: readonly Experience[] = [
   },
   {
     company: 'Secretaria de Estado da Casa Civil de Goiás',
-    role: 'Full Stack Developer — Estágio',
+    role: 'Desenvolvedor Full Stack — Estágio',
     period: 'Jan 2022 — Mai 2023',
     description: [
       'Desenvolvimento de sistemas institucionais com Ruby on Rails, Vue.js e PostgreSQL.',
@@ -48,9 +48,8 @@ export const experiences: readonly Experience[] = [
   },
   {
     company: 'Freelancer',
-    role: 'Software Developer',
-    period: '2025 — Atual',
-    current: true,
+    role: 'Desenvolvedor de Software Jr.',
+    period: 'Jul 2025 — Jan 2026',
     description: [
       'Desenvolvimento de aplicações web, interfaces responsivas, automações e integrações para diferentes clientes.',
       'Implementação de interfaces a partir de especificações visuais complexas e adaptação para diferentes tamanhos de tela.',

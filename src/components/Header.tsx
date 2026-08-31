@@ -3,10 +3,11 @@ import { profile } from '../data/profile'
 import { Icon } from './Icons'
 
 const navItems = [
-  { label: 'Sobre', href: '#sobre' },
+  { label: 'Sobre', href: '#inicio' },
   { label: 'Experiência', href: '#experiencia' },
   { label: 'Skills', href: '#skills' },
   { label: 'Formação', href: '#formacao' },
+  { label: 'Idiomas', href: '#idiomas' },
   { label: 'Contato', href: '#contato' },
 ] as const
 
@@ -66,4 +67,3 @@ export function Header() {
     </header>
   )
 }
-

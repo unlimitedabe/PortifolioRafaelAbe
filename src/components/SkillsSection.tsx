@@ -8,8 +8,8 @@ export function SkillsSection() {
       <div className="container">
         <SectionHeading
           id="skills-title"
-          eyebrow="Competências técnicas"
-          title="Tecnologias organizadas por contexto de uso."
+          eyebrow="STACK"
+          title="Tecnologias e Competências"
           description="Uma base Full Stack com ênfase em backend, dados e comunicação entre sistemas."
         />
 

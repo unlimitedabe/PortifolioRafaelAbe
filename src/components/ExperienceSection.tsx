@@ -8,8 +8,8 @@ export function ExperienceSection() {
       <div className="container">
         <SectionHeading
           id="experience-title"
-          eyebrow="Experiência"
-          title="Software em produção, da regra de negócio à interface."
+          eyebrow="TRAJETÓRIA"
+          title="Experiência profissional"
           description="Experiência profissional em aplicações web completas, integrações e construção de soluções para diferentes contextos."
         />
 

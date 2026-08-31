@@ -1,4 +1,3 @@
-import { About } from './components/About'
 import { Contact } from './components/Contact'
 import { EducationSection } from './components/EducationSection'
 import { ExperienceSection } from './components/ExperienceSection'
@@ -14,7 +13,6 @@ function App() {
       <Header />
       <main>
         <Hero />
-        <About />
         <ExperienceSection />
         <SkillsSection />
         <EducationSection />
@@ -27,4 +25,3 @@ function App() {
 }
 
 export default App
-

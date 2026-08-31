@@ -5,8 +5,8 @@ export function Languages() {
     <section className="languages-section" id="idiomas" aria-labelledby="languages-title">
       <div className="container languages-inner">
         <div>
-          <span className="section-eyebrow">Idiomas</span>
-          <h2 id="languages-title">Comunicação além do código.</h2>
+          <span className="section-eyebrow">COMUNICAÇÃO</span>
+          <h2 id="languages-title">Idiomas para comunicação e estudo técnico</h2>
         </div>
         <dl className="language-list">
           {languages.map((item) => (

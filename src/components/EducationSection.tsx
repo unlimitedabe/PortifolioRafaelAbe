@@ -8,7 +8,7 @@ export function EducationSection() {
         <SectionHeading
           id="education-title"
           eyebrow="Formação"
-          title="Engenharia como fundamento, aprendizado contínuo como prática."
+          title="Formação acadêmica"
         />
 
         <div className="education-layout">

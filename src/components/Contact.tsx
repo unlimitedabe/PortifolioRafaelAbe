@@ -9,7 +9,7 @@ export function Contact() {
           <div className="contact-copy">
             <span className="contact-eyebrow">Contato</span>
             <h2 id="contact-title">Vamos conversar?</h2>
-            <p>Tem uma oportunidade ou projeto em que meu perfil pode contribuir?</p>
+            {/* <p>Tem uma oportunidade ou projeto em que meu perfil pode contribuir?</p> */}
           </div>
 
           <div className="contact-links">
