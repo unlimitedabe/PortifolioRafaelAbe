@@ -1,19 +1,25 @@
 import { useEffect, useState } from 'react'
 import { profile } from '../data/profile'
+import { useLanguage } from '../i18n/LanguageContext'
+import { languageOptionLabels } from '../i18n/translations'
+import type { Language } from '../i18n/types'
 import { Icon } from './Icons'
 
 const navItems = [
-  { id: 'inicio', label: 'Sobre', href: '#inicio' },
-  { id: 'experiencia', label: 'Experiência', href: '#experiencia' },
-  { id: 'skills', label: 'Skills', href: '#skills' },
-  { id: 'formacao', label: 'Formação', href: '#formacao' },
-  { id: 'idiomas', label: 'Idiomas', href: '#idiomas' },
-  { id: 'contato', label: 'Contato', href: '#contato' },
+  { id: 'inicio', labelKey: 'about', href: '#inicio' },
+  { id: 'experiencia', labelKey: 'experience', href: '#experiencia' },
+  { id: 'skills', labelKey: 'skills', href: '#skills' },
+  { id: 'formacao', labelKey: 'education', href: '#formacao' },
+  { id: 'idiomas', labelKey: 'languages', href: '#idiomas' },
+  { id: 'contato', labelKey: 'contact', href: '#contato' },
 ] as const
+
+const languageOptions: readonly Language[] = ['pt', 'en']
 
 type SectionId = (typeof navItems)[number]['id']
 
 export function Header() {
+  const { language, setLanguage, t } = useLanguage()
   const [menuOpen, setMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState<SectionId>('inicio')
 
@@ -86,7 +92,7 @@ export function Header() {
   return (
     <header className="site-header">
       <div className="container header-inner">
-        <a className="brand" href="#inicio" aria-label="Rafael Abe — início">
+        <a className="brand" href="#inicio" aria-label={t.header.brandHome}>
           <span className="brand-mark">RA</span>
           <span>{profile.name}</span>
         </a>
@@ -94,7 +100,7 @@ export function Header() {
         <button
           className="menu-button"
           type="button"
-          aria-label={menuOpen ? 'Fechar menu' : 'Abrir menu'}
+          aria-label={menuOpen ? t.header.closeMenu : t.header.openMenu}
           aria-expanded={menuOpen}
           aria-controls="main-navigation"
           onClick={() => setMenuOpen((open) => !open)}
@@ -105,7 +111,7 @@ export function Header() {
         <nav
           className={`main-nav${menuOpen ? ' main-nav--open' : ''}`}
           id="main-navigation"
-          aria-label="Navegação principal"
+          aria-label={t.header.mainNavigation}
         >
           <div className="nav-links">
             {navItems.map((item) => (
@@ -116,17 +122,35 @@ export function Header() {
                 aria-current={activeSection === item.id ? 'location' : undefined}
                 onClick={() => setMenuOpen(false)}
               >
-                {item.label}
+                {t.navigation[item.labelKey]}
               </a>
             ))}
           </div>
-          <div className="header-socials" aria-label="Redes sociais">
-            <a href={profile.github} target="_blank" rel="noreferrer" aria-label="GitHub de Rafael Abe">
+          <div className="header-socials" aria-label={t.header.socialNetworks}>
+            {/* <a href={profile.github} target="_blank" rel="noreferrer" aria-label={t.header.githubProfile}>
               <Icon name="github" />
             </a>
-            <a href={profile.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn de Rafael Abe">
+            <a href={profile.linkedin} target="_blank" rel="noreferrer" aria-label={t.header.linkedinProfile}>
               <Icon name="linkedin" />
             </a>
+          </div> */}
+            <div className="language-switcher" role="group" aria-label={t.header.languageSelector}>
+              {languageOptions.map((option, index) => (
+                <span className="language-option-wrap" key={option}>
+                  {index > 0 && <span className="language-separator" aria-hidden="true">|</span>}
+                  <button
+                    className={`language-option${language === option ? ' is-active' : ''}`}
+                    type="button"
+                    lang={option === 'pt' ? 'pt-BR' : 'en'}
+                    aria-label={languageOptionLabels[option]}
+                    aria-pressed={language === option}
+                    onClick={() => setLanguage(option)}
+                  >
+                    {option.toUpperCase()}
+                  </button>
+                </span>
+              ))}
+            </div>
           </div>
         </nav>
       </div>

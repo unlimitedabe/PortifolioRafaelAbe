@@ -217,6 +217,51 @@ button:focus-visible {
   transform: scaleX(1);
 }
 
+.language-switcher,
+.language-option-wrap {
+  display: inline-flex;
+  align-items: center;
+}
+
+.language-switcher {
+  gap: 2px;
+  color: #98a2b3;
+}
+
+.language-option-wrap {
+  gap: 2px;
+}
+
+.language-option {
+  min-width: 30px;
+  min-height: 36px;
+  padding: 0 4px;
+  border: 0;
+  background: transparent;
+  color: #667085;
+  cursor: pointer;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  transition: color 180ms ease;
+}
+
+.language-option:hover {
+  color: var(--ink);
+}
+
+.language-option.is-active,
+.language-option.is-active:hover {
+  color: var(--blue);
+}
+
+.language-separator {
+  color: #c4cad4;
+  font-size: 0.72rem;
+  user-select: none;
+}
+
 .header-socials {
   gap: 8px;
   padding-left: 24px;
@@ -921,9 +966,18 @@ button:focus-visible {
   }
 
   .header-socials {
-    margin-top: 18px;
+    margin-top: 10px;
     padding-left: 0;
     border-left: 0;
+  }
+
+  .language-switcher {
+    margin-top: 14px;
+  }
+
+  .language-option {
+    min-width: 40px;
+    min-height: 44px;
   }
 
   .hero-profile {
@@ -976,11 +1030,19 @@ button:focus-visible {
     gap: 30px;
   }
 
+  .hero-identity {
+    justify-content: center;
+    text-align: center;
+  }
+
   .hero-portrait {
     width: min(62vw, 250px);
+    margin-inline: auto;
   }
 
   .hero h1 {
+    text-align: center;
+    text-wrap: balance;
     font-size: clamp(2.25rem, 8.5vw, 2.8rem);
   }
 

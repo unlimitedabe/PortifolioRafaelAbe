@@ -1,42 +1,51 @@
+import type { LocalizedText } from '../i18n/types'
+
+export type SkillCategoryId =
+  | 'backend'
+  | 'integrations'
+  | 'frontend'
+  | 'dataInfrastructure'
+  | 'softwareEngineering'
+
 export type SkillCategory = {
-  title: string
+  id: SkillCategoryId
   index: string
-  skills: readonly string[]
+  skills: readonly LocalizedText[]
 }
 
 export const skillCategories: readonly SkillCategory[] = [
   {
-    title: 'Backend',
+    id: 'backend',
     index: '01',
     skills: ['Ruby on Rails', 'Node.js', 'Python', 'FastAPI', 'Flask'],
   },
   {
-    title: 'APIs & Integrações',
+    id: 'integrations',
     index: '02',
     skills: [
       'REST APIs',
       'Postman',
       'Webhooks',
-      'Integração com APIs externas',
+      { translationKey: 'thirdPartyApiIntegration' },
     ],
   },
   {
-    title: 'Frontend',
+    id: 'frontend',
     index: '03',
     skills: ['Vue.js', 'React', 'TypeScript', 'JavaScript', 'Vite'],
   },
   {
-    title: 'Dados & Infraestrutura',
+    id: 'dataInfrastructure',
     index: '04',
     skills: ['PostgreSQL', 'SQL', 'Docker', 'Git', 'GitHub', 'GitLab'],
   },
   {
-    title: 'Engenharia de Software',
+    id: 'softwareEngineering',
     index: '05',
     skills: [
-      'Levantamento de requisitos',
-      'Documentação técnica',
-      'Teste de sistemas',
+      { translationKey: 'requirementsGathering' },
+      { translationKey: 'technicalDocumentation' },
+      { translationKey: 'systemTesting' },
       'Scrum',
     ],
   },
@@ -47,4 +56,3 @@ export const highlightedSkills = new Set([
   'REST APIs',
   'PostgreSQL',
 ])
-

@@ -1,15 +1,17 @@
-import { languages } from '../data/education'
+import { useLanguage } from '../i18n/LanguageContext'
 
 export function Languages() {
+  const { t } = useLanguage()
+
   return (
     <section className="languages-section" id="idiomas" aria-labelledby="languages-title">
       <div className="container languages-inner">
         <div>
-          <span className="section-eyebrow">COMUNICAÇÃO</span>
-          <h2 id="languages-title">Idiomas para comunicação e estudo técnico</h2>
+          <span className="section-eyebrow">{t.languages.eyebrow}</span>
+          <h2 id="languages-title">{t.languages.title}</h2>
         </div>
         <dl className="language-list">
-          {languages.map((item) => (
+          {t.languages.items.map((item) => (
             <div key={item.language}>
               <dt>{item.language}</dt>
               <dd>{item.level}</dd>
@@ -20,4 +22,3 @@ export function Languages() {
     </section>
   )
 }
-

@@ -1,8 +1,11 @@
 import { featuredTechnologies, profile } from '../data/profile'
+import { useLanguage } from '../i18n/LanguageContext'
 import { Icon } from './Icons'
 import profilePhoto from '../assets/rafael-abe.jpeg'
 
 export function Hero() {
+  const { t } = useLanguage()
+
   return (
     <section className="hero" id="inicio" aria-labelledby="hero-title">
       <div className="container hero-inner">
@@ -21,24 +24,24 @@ export function Hero() {
 
           <div className="hero-copy">
             <h1 id="hero-title">
-              Desenvolvedor de Software <span> Júnior</span>
+              {t.hero.title.map((part, index) =>
+                part.highlighted ? (
+                  <span key={`${part.text}-${index}`}>{part.text}</span>
+                ) : (
+                  part.text
+                ),
+              )}
             </h1>
 
             <div className="hero-bio">
-              <p>
-                Formado em Engenharia de Computação pela PUC Goiás e pós-graduado em Ciência de
-                Dados e Inteligência Artificial, tenho experiência Full Stack em backend, APIs REST,
-                aplicações web, integrações e automação de sistemas.
-              </p>
-              <p>
-                Atuei profissionalmente com Ruby on Rails, Vue.js e PostgreSQL e atualmente trabalho
-                com TypeScript, Node.js, React, SQL e Docker. Tenho interesse constante em desenvolver novos sistemas que desafiem meu raciocínio técnico e me permitam evoluir na construção de soluções cada vez mais eficientes e bem estruturadas.
-              </p>
+              {t.hero.paragraphs.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
             </div>
 
             <div className="hero-actions">
               <a className="button button--primary" href="#experiencia">
-                Ver experiência
+                {t.hero.viewExperience}
                 <Icon name="arrow" />
               </a>
               <a className="button button--secondary" href={profile.github} target="_blank" rel="noreferrer">
@@ -54,8 +57,8 @@ export function Hero() {
         </div>
 
         <div className="hero-bottom">
-          <div className="hero-technologies" aria-label="Principais tecnologias">
-            <span className="tech-label">Stack principal</span>
+          <div className="hero-technologies" aria-label={t.hero.coreTechnologies}>
+            <span className="tech-label">{t.hero.coreStack}</span>
             <ul>
               {featuredTechnologies.map((technology, index) => (
                 <li className={index < 3 ? 'technology--featured' : undefined} key={technology}>

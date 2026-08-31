@@ -1,22 +1,24 @@
 import { profile } from '../data/profile'
+import { useLanguage } from '../i18n/LanguageContext'
 import { Icon } from './Icons'
 
 export function Contact() {
+  const { t } = useLanguage()
+
   return (
     <section className="contact-section" id="contato" aria-labelledby="contact-title">
       <div className="container">
         <div className="contact-panel">
           <div className="contact-copy">
-            <span className="contact-eyebrow">Contato</span>
-            <h2 id="contact-title">Vamos conversar?</h2>
-            {/* <p>Tem uma oportunidade ou projeto em que meu perfil pode contribuir?</p> */}
+            <span className="contact-eyebrow">{t.contact.eyebrow}</span>
+            <h2 id="contact-title">{t.contact.title}</h2>
           </div>
 
           <div className="contact-links">
             <a href={`mailto:${profile.email}`}>
               <span className="contact-icon"><Icon name="mail" /></span>
               <span>
-                <small>E-mail</small>
+                <small>{t.contact.email}</small>
                 {profile.email}
               </span>
               <span aria-hidden="true">↗</span>
@@ -43,4 +45,3 @@ export function Contact() {
     </section>
   )
 }
-
