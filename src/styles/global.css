@@ -188,6 +188,7 @@ button:focus-visible {
   color: #475467;
   font-size: 0.82rem;
   font-weight: 600;
+  transition: color 180ms ease;
 }
 
 .nav-links a::after {
@@ -205,6 +206,11 @@ button:focus-visible {
 
 .nav-links a:hover {
   color: var(--ink);
+}
+
+.nav-links a.is-active,
+.nav-links a.is-active:hover {
+  color: var(--blue);
 }
 
 .nav-links a:hover::after {

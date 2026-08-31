@@ -1,5 +1,6 @@
 import { featuredTechnologies, profile } from '../data/profile'
 import { Icon } from './Icons'
+import profilePhoto from '../assets/rafael-abe.jpeg'
 
 export function Hero() {
   return (
@@ -11,11 +12,11 @@ export function Hero() {
           </p>
 
           <figure className="hero-portrait">
-            {/* Substitua este placeholder por uma imagem com a classe portrait-image. */}
-            <div className="portrait-placeholder" role="img" aria-label="Espaço reservado para a foto profissional de Rafael Abe">
-              <span className="portrait-initials" aria-hidden="true">RA</span>
-              <span className="portrait-label">Foto profissional</span>
-            </div>
+            <img
+              className="portrait-image"
+              src={profilePhoto}
+              alt="Rafael Abe"
+            />
           </figure>
 
           <div className="hero-copy">
@@ -31,7 +32,7 @@ export function Hero() {
               </p>
               <p>
                 Atuei profissionalmente com Ruby on Rails, Vue.js e PostgreSQL e atualmente trabalho
-                com TypeScript, Node.js, React, SQL e Docker.
+                com TypeScript, Node.js, React, SQL e Docker. Tenho interesse constante em desenvolver novos sistemas que desafiem meu raciocínio técnico e me permitam evoluir na construção de soluções cada vez mais eficientes e bem estruturadas.
               </p>
             </div>
 

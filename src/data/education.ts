@@ -20,9 +20,10 @@ export const education: readonly Education[] = [
 ]
 
 export const academicHighlights = [
-  'Participação em equipe de maratona de programação, com uso de C++ para algoritmos e resolução de problemas.',
+  'Participação em time de maratona de programação, com uso de C++ nos algoritmos para a resolução de problemas complexos e no menor tempo possível.',
   'Mentor convidado na disciplina de Controle de Processos.',
   'Desenvolvimento acadêmico de sistema de supervisão e automação de aquário com Arduino e Python, integrando hardware e interface de monitoramento.',
+  'Desenvolvimento acadêmico de sistema de telemedicina para gestantes em situação de risco, utilizando de plataformas existentes e manipulação de dados.',
 ] as const
 
 export const languages = [
