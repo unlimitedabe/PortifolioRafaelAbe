@@ -1,7 +1,10 @@
 export type Experience = {
   company: string
   role: string
-  period: string
+  period: {
+    start: string
+    end: string
+  }
   current?: boolean
   description: readonly string[]
   technologies: readonly string[]
@@ -11,7 +14,7 @@ export const experiences: readonly Experience[] = [
   {
     company: 'Arkea Soluções Inteligentes',
     role: 'Desenvolvedor de Software Jr.',
-    period: 'Jan 2026 — Atual',
+    period: { start: 'Jan 2026', end: 'Atualmente' },
     current: true,
     description: [
       'Desenvolvimento de aplicações, automações e integrações utilizando TypeScript, React, Node.js, SQL e Docker.',
@@ -31,7 +34,7 @@ export const experiences: readonly Experience[] = [
   {
     company: 'Secretaria de Estado da Casa Civil de Goiás',
     role: 'Desenvolvedor Full Stack — Estágio',
-    period: 'Jan 2022 — Mai 2023',
+    period: { start: 'Jan 2022', end: 'Mai 2023' },
     description: [
       'Desenvolvimento de sistemas institucionais com Ruby on Rails, Vue.js e PostgreSQL.',
       'Implementação de funcionalidades CRUD, upload de arquivos, relatórios, dashboards e recursos da plataforma de Consulta Pública.',
@@ -49,7 +52,7 @@ export const experiences: readonly Experience[] = [
   {
     company: 'Freelancer',
     role: 'Desenvolvedor de Software Jr.',
-    period: 'Jul 2025 — Jan 2026',
+    period: { start: 'Jul 2025', end: 'Jan 2026' },
     description: [
       'Desenvolvimento de aplicações web, interfaces responsivas, automações e integrações para diferentes clientes.',
       'Implementação de interfaces a partir de especificações visuais complexas e adaptação para diferentes tamanhos de tela.',
@@ -67,7 +70,7 @@ export const experiences: readonly Experience[] = [
   {
     company: 'Pontifícia Universidade Católica de Goiás — JCPOLI',
     role: 'Desenvolvedor Web — Estágio',
-    period: 'Mar 2024 — Jun 2024',
+    period: { start: 'Mar 2024', end: 'Jun 2024' },
     description: [
       'Participação na reestruturação da plataforma da JCPOLI, incluindo integração de duas aplicações web.',
       'Desenvolvimento de nova interface, novas funcionalidades e persistência de dados em uma aplicação que anteriormente não possuía banco de dados.',
@@ -77,7 +80,7 @@ export const experiences: readonly Experience[] = [
   {
     company: 'Ministério Público do Estado de Goiás',
     role: 'Desenvolvedor Low-code — Estágio',
-    period: 'Jul 2024 — Ago 2024',
+    period: { start: 'Jul 2024', end: 'Ago 2024' },
     description: [
       'Desenvolvimento do E-relatório utilizando JotForm e automações em Excel.',
       'Participação na integração da solução com processos automatizados de cálculos relacionados ao monitoramento de desmatamento.',
@@ -85,4 +88,3 @@ export const experiences: readonly Experience[] = [
     technologies: ['JotForm', 'Excel', 'Automação', 'Integração de sistemas'],
   },
 ]
-

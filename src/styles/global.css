@@ -523,24 +523,8 @@ button:focus-visible {
   font-weight: 500;
 }
 
-.current-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  padding: 6px 9px;
-  border-radius: 999px;
-  background: #ecfdf3;
-  color: #087443;
-  font-size: 0.68rem;
-  font-weight: 700;
-}
-
-.current-badge::before {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #12b76a;
-  content: '';
+.experience-period-current {
+  color: var(--blue);
 }
 
 .experience-content h3 {
@@ -1091,10 +1075,6 @@ button:focus-visible {
 
   .experience-meta {
     grid-template-columns: auto 1fr;
-  }
-
-  .current-badge {
-    grid-column: 2;
   }
 
   .academic-highlights {

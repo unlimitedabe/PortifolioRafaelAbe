@@ -15,11 +15,20 @@ export function ExperienceSection() {
 
         <div className="timeline">
           {experiences.map((experience, index) => (
-            <article className="experience-item" key={`${experience.company}-${experience.period}`}>
+            <article
+              className="experience-item"
+              key={`${experience.company}-${experience.period.start}`}
+            >
               <div className="experience-meta">
                 <span className="experience-number">{String(index + 1).padStart(2, '0')}</span>
-                <span className="experience-period">{experience.period}</span>
-                {experience.current && <span className="current-badge">Em andamento</span>}
+                <span className="experience-period">
+                  {experience.period.start} —{' '}
+                  {experience.current ? (
+                    <span className="experience-period-current">{experience.period.end}</span>
+                  ) : (
+                    experience.period.end
+                  )}
+                </span>
               </div>
 
               <div className="experience-content">
