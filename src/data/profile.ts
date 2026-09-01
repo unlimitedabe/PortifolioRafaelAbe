@@ -10,6 +10,7 @@ export const featuredTechnologies = [
   'Ruby on Rails',
   'PostgreSQL',
   'REST APIs',
+  'Vue.js',
   'Node.js',
   'React',
   'Docker',
