@@ -147,35 +147,36 @@ export const translations: Record<Language, Translation> = {
           role: 'Desenvolvedor de Software Jr.',
           period: { start: 'Jan 2026', end: 'Atual' },
           description: [
-            'Desenvolvimento de aplicações, automações e integrações utilizando TypeScript, React, Node.js, SQL e Docker.',
-            'Integração com marketplaces, ERPs, serviços externos e automações de comunicação via WhatsApp.',
-            'Participação em levantamento de requisitos, regras de negócio, arquitetura e desenvolvimento das soluções.',
+            'Desenvolvimento de aplicações, automações e integrações utilizando TypeScript, Node.js, React, SQL e Docker.',
+            'Integração com marketplaces, ERPs e canais de comunicação, incluindo Amazon, Mercado Livre, Shopee, GestãoClick e WhatsApp.',
+            'Desenvolvimento de automações e serviços internos, participando do levantamento de requisitos, definição de regras de negócio e arquitetura das soluções.',
           ],
         },
         casaCivil: {
           role: 'Desenvolvedor Full Stack — Estágio',
           period: { start: 'Jan 2022', end: 'Mai 2023' },
           description: [
-            'Desenvolvimento de sistemas institucionais com Ruby on Rails, Vue.js e PostgreSQL.',
-            'Implementação de funcionalidades CRUD, upload de arquivos, relatórios, dashboards e recursos da plataforma de Consulta Pública.',
-            'Participação em levantamento de requisitos e testes de endpoints e requisições HTTP utilizando Postman.',
+            'Desenvolvimento de sistemas institucionais utilizando Ruby on Rails, Vue.js e PostgreSQL.',
+            'Implementação e evolução de APIs REST, consultas com ActiveRecord, respostas JSON, paginação, internacionalização e funcionalidades do módulo de Consulta Pública.',
+            'Integração entre frontend e backend, manutenção de funcionalidades existentes e testes de endpoints e requisições HTTP.',
           ],
         },
         freelancer: {
           role: 'Desenvolvedor de Software Jr.',
           period: { start: 'Jul 2025', end: 'Jan 2026' },
           description: [
-            'Desenvolvimento de aplicações web, interfaces responsivas, automações e integrações para diferentes clientes.',
-            'Implementação de interfaces a partir de especificações visuais complexas e adaptação para diferentes tamanhos de tela.',
-            'Integração com APIs externas utilizando principalmente Vue.js, React, Node.js e Vite.',
+            'Desenvolvimento de aplicações e interfaces web responsivas para diferentes clientes.',
+            'Implementação de interfaces a partir de especificações visuais detalhadas, incluindo comportamentos personalizados de posicionamento, escala e responsividade.',
+            'Desenvolvimento com Vue.js, React, JavaScript, TypeScript, Vite e integração com APIs externas.',
           ],
         },
         jcpoli: {
           role: 'Desenvolvedor Web — Estágio',
           period: { start: 'Mar 2024', end: 'Jun 2024' },
           description: [
-            'Participação na reestruturação da plataforma da JCPOLI, incluindo integração de duas aplicações web.',
-            'Desenvolvimento de nova interface, novas funcionalidades e persistência de dados em uma aplicação que anteriormente não possuía banco de dados.',
+            'Desenvolvimento frontend com Vue.js e TypeScript, incluindo integração e posterior reorganização de duas aplicações web.',
+            'Implementação de roteamento por edição, novas páginas e componentes, responsividade e organização do conteúdo histórico da JCPOLI.',
+            'Adaptação da aplicação a mudanças de requisitos e manutenção do site durante a realização da 3ª edição do evento.',
           ],
         },
         ministerioPublico: {
@@ -183,7 +184,7 @@ export const translations: Record<Language, Translation> = {
           period: { start: 'Jul 2024', end: 'Ago 2024' },
           description: [
             'Desenvolvimento do E-relatório utilizando JotForm e automações em Excel.',
-            'Participação na integração da solução com processos automatizados de cálculos relacionados ao monitoramento de desmatamento.',
+            'Participação na integração da solução com processos automatizados de cálculo e monitoramento relacionados ao desmatamento.',
           ],
         },
       },
